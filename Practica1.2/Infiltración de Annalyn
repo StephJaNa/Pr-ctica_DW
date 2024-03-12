@@ -1,1 +1,21 @@
+function accionesDisponibles(caballero, arquero, prisionero, perro) {
+    const acciones = {
+      ataqueRapido: false,
+      espia: false,
+      senalarPrisionero: false,
+      prisioneroLibre: false,
+    };
+  
+    // Ataque rápido
+    if (caballero === "dormido") {
+      acciones.ataqueRapido = true;
+    }
+  
+    // Espiar
+    if (caballero === "despierto" || arquero === "despierto") {
+      acciones.espia = true;
+    }
 
+
+
+}
