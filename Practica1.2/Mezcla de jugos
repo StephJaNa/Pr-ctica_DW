@@ -18,3 +18,27 @@ function timeToMixJuice(jugo){
             return 2.5;
     }
 }
+
+function limesToCut(necesario_rodajas){
+    const tamanioLimas = {
+        "pequeña": 6,
+        "mediana": 8,
+        "grande": 10
+    };
+    
+    let cantidad_rodajas = 0;
+    let limas = 0;
+
+    for (let i = 0; i < limasInventario.length; i++) {
+        const tamanio = limasInventario[i]; //Acceder al tamaño de lima en el inventario
+        cantidad_rodajas += tamanioLimas[tamanio];
+
+        if (cantidad_rodajas >= necesario_rodajas) {
+            limas = i + 1; 
+            break;
+        }
+    }
+
+    return limas;
+}
+
