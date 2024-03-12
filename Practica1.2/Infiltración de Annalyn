@@ -42,3 +42,12 @@ function accionesDisponibles(caballero, arquero, prisionero, perro) {
     perro: true,
     };
 
+    const accionesDisponibles1 = accionesDisponibles(
+      estadoActual.caballero,
+      estadoActual.arquero,
+      estadoActual.prisionero,
+      estadoActual.perro,
+    );
+    
+    console.log(accionesDisponibles1); 
+
