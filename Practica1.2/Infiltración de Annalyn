@@ -16,6 +16,29 @@ function accionesDisponibles(caballero, arquero, prisionero, perro) {
       acciones.espia = true;
     }
 
+    // Señalar al prisionero
+    if (prisionero === "despierto" && arquero === "dormido") {
+      acciones.senalarPrisionero = true;
+    }
 
+    // Liberar al prisionero
+    if (perro) {
+      if (arquero === "dormido") {
+         acciones.prisioneroLibre = true;
+    }
+    } else {
+      if (prisionero === "despierto" && caballero === "dormido" && arquero === "dormido") {
+         acciones.prisioneroLibre = true;
+    }
+    }
 
-}
+     return acciones;
+    }
+
+    const estadoActual = {
+    caballero: "dormido", //Ponemos nosotros desde la consola el estado
+    arquero: "dormido",
+    prisionero: "despierto",
+    perro: true,
+    };
+
