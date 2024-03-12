@@ -41,4 +41,21 @@ function limesToCut(necesario_rodajas){
 
     return limas;
 }
+//3.Terminar el turno
 
+function remainingOrders(minutosRestantes, pedidos) {
+    let pedidosNoPreparados = [];
+    
+    for (let i = 0; i < pedidos.length; i++) {
+        const tiempoPreparacion = timeToMixJuice(pedidos[i]);
+        console.log('Tiempo de preparacion de ', pedidos[i],' es: ',timeToMixJuice(pedidos[i]))
+
+        if (minutosRestantes < tiempoPreparacion) {
+             pedidosNoPreparados.push(pedidos[i]);
+        } else {
+            minutosRestantes -= tiempoPreparacion;
+        }
+    }
+    
+    return pedidosNoPreparados;
+}
