@@ -59,3 +59,13 @@ function remainingOrders(minutosRestantes, pedidos) {
     
     return pedidosNoPreparados;
 }
+
+//Valores de rodajas por limas
+const limasInventario = ['pequeña', 'mediana', 'grande', 'pequeña', 'grande'];
+const necesario_rodajas = 22; 
+//Turno restante
+const minutosRestantes = 10;
+const pedidos = ['Pure Strawberry Joy', 'Energizer', 'Special Offer', 'Green Garden', 'All or Nothing', 'All or Nothing'];//Pedido
+
+console.log('Cantidad de limas a cortar:', limesToCut(necesario_rodajas), 'limas\n');
+console.log('\nPedidos restantes al final del turno:', remainingOrders(minutosRestantes, pedidos));
