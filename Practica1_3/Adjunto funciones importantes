@@ -64,11 +64,17 @@ class ProgramWindow{
         this.position.move(finalX, finalY);
     }
 }
-
-
-
-
-
+function changeWindow(programWindow){
+    //Cambiar el tamanio de la ventana a 400x300
+    const newSize = new Size(400, 300);
+    programWindow.resize(newSize);
+  
+    //Cambiar la posicion de la ventana a x=100, y=150
+    const newPosition = new Position(100, 150);
+    programWindow.moveWindow(newPosition);
+  
+    return programWindow;
+}
 
 //Pruebas
 //------------------------------------
