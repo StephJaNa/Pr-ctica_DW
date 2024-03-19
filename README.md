@@ -5,4 +5,4 @@ Integrantes:
 3. Antonio AR (BAntonio28)
 
 
-Respositorio que contiene las prácticas realizadas (1.1 y 1.2)
+Respositorio que contiene las prácticas realizadas (1.1, 1.2 y 1.3)
