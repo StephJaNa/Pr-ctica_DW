@@ -25,6 +25,7 @@ class Position{
         this.y = newY;
     }
 }
+
 //3. Definir una clase ProgramWindow
 class ProgramWindow{
     constructor(){
@@ -63,3 +64,59 @@ class ProgramWindow{
         this.position.move(finalX, finalY);
     }
 }
+
+
+
+
+
+
+//Pruebas
+//------------------------------------
+const size = new Size(1080,764);
+console.log(size.width);
+//1080
+console.log(size.height);
+//764
+
+size.resize(1920,1080);
+console.log(size.width);
+//1920
+console.log(size.height);
+//1080
+//------------------------------------
+const point = new Position();
+console.log(point.x);
+//0
+console.log(point.y);
+//0
+
+point.move(100,200);
+console.log(point.x);
+//100
+console.log(point.y);
+//200
+//------------------------------------
+const programWindow = new ProgramWindow();
+console.log(programWindow.screenSize.width);
+//800
+//------------------------------------
+const programWindow1 = new ProgramWindow();
+const newSize = new Size(600,400);
+programWindow1.resize(newSize);
+console.log(programWindow1.size.width);
+//600
+console.log(programWindow1.size.height);
+//400
+//------------------------------------
+const programWindow2 = new ProgramWindow();
+const newPosition = new Position(50,100);
+programWindow2.moveWindow(newPosition);
+console.log(programWindow2.position.x);
+//50
+console.log(programWindow2.position.y);
+//100
+//------------------------------------
+const programWindow3 = new ProgramWindow();
+changeWindow(programWindow3);
+console.log(programWindow3.size.width);
+//400
